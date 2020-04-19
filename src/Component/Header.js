@@ -27,7 +27,7 @@ class Header extends Component {
         <div className="row">
           <div className="col-md-8 text-left">
             <h1 className="text-success">
-              <img style={{ height: 70 }} src="/images/logo/logo.png" alt="" />{" "}
+              <img style={{ height: 70 }} src="/image/wellness.png" alt="" />{" "}
               Ock Ock {" "}
             </h1>
           </div>
