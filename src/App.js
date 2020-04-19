@@ -1,9 +1,7 @@
 import './App.css'
 import React, { Component } from 'react';
 import Header from "./Component/Header";
-// import Monitor from "./components/monitor/Monitor";
-// import Footer from "./components/Footer";
-import Item from "./Component/Item";
+
 import Show from './Component/Show';
 
 class App extends Component {
