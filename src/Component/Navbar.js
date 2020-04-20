@@ -2,29 +2,39 @@ import React, { Component } from "react";
 
 export default function Navbar() {
     return (
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"><img style={{ height: 70 }} src="/image/wellness.png" alt="" />{" "}
-              Ock Ock {" "}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    {/* <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item-right">
-        <a class="nav-link" href="#">Log out</a>
-      </li>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><img style={{ height: 70,width:60 }} src="/image/virus.png" alt="" />
+    {"   "}Ock Ock </a>
+            </li>
+            {/* <li class="nav-item">
+                <a class="nav-link" href="//codeply.com">Codeply</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li> */}
+        </ul>
+    </div>
    
    
-    </ul> */}
-    
-        <a class="nav-brand" href="#">Log out</a>
-      
-  </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            {/* <li class="nav-item">
+                <a class="nav-link" href="#">Right</a>
+            </li> */}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Log out</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
     );
