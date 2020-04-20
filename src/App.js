@@ -1,6 +1,7 @@
 import './App.css'
 import React, { Component } from 'react';
 import Header from "./Component/Header";
+import NavBar from "./Component/Navbar"
 
 import Show from './Component/Show';
 
@@ -17,15 +18,17 @@ class App extends Component {
       { productId: 3, productName: "หน้ากากอนามัยลายดอก No.03", unitPrice: "49", thumbnail: "/image/No.03.jpg" },
       { productId: 4, productName: "หน้ากากอนามัยลายดอก No.04", unitPrice: "49", thumbnail: "/image/No.04.jpg" },
       { productId: 5, productName: "หน้ากากอนามัยลายดอก No.05", unitPrice: "49", thumbnail: "/image/No.05.jpg" },
-      { productId: 6, productName: "หน้ากากอนามัยลายดอก No.06", unitPrice: "49", thumbnail: "/image/No.06.jpg" }
+      { productId: 6, productName: "หน้ากากอนามัยลายดอก No.06", unitPrice: "49", thumbnail: "/image/No.06.jpg" },
+      { productId: 5, productName: "หน้ากากอนามัยลายดอก No.07", unitPrice: "49", thumbnail: "/image/No.07.jpg" },
+      { productId: 5, productName: "หน้ากากอนามัยลายดอก No.08", unitPrice: "49", thumbnail: "/image/No.08.jpg" },
   ]})
   }
 
   render() {
     return (
       <div>
-        
-        <Header />
+        <NavBar />
+        {/* <Header /> */}
         <Show products={this.state.products} />
         {/* <Monitor products={this.state.products} />
         <Footer company="Olanlab" email="olan@olanlab.com" /> */}
