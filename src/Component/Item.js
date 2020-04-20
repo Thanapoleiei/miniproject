@@ -9,11 +9,11 @@ class Item extends Component {
     render() {
         const {productName, unitPrice, thumbnail} = this.props.product;
         return (
-            <div className="col-md-3 col-sm-6">
+            <div className="col-md-4 col-sm-5">
                 <img className="img-fluid img-thumbnail" src={thumbnail} />
-                <h5 className="mt-2">{productName}</h5>
+                <h5 className="mt-4">{productName}</h5>
                 <p className="title text-right" >{unitPrice} THB</p>
-                <button className="btn btn-block btn-secondary title" onClick={() => this.props.onAddOrder(this.props.product)} >
+                <button className="btn btn-primary btn-lg" onClick={() => this.props.onAddOrder(this.props.product)} >
                     ซื้อ
                 </button>
                 <hr />

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Calculator from "./Calculator";
+import Calculator from "./Calculator";
 import List from "./List";
 
 class Show extends Component {
@@ -35,6 +35,10 @@ class Show extends Component {
                 <div className="row">
                     <div className="col-md-9 ">
                         <List products={this.props.products} onAddOrder={this.addOrder} />
+                        
+                    </div>
+                    <div className="col-md-3">
+                        <Calculator totalPrice={this.state.totalPrice} orders={this.state.orders} onDelOrder={this.delOrder} />
                     </div>
                   
                 </div>
