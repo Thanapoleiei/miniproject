@@ -4,7 +4,7 @@ class Calculator extends Component {
 
     showOrders (orders) {
         if(!orders || orders.length == 0) {
-            return <li className="text-right text-muted title">ไม่มีสินค้าค่ะ</li>
+            return <li className="text-right text-muted title">ตะกร้ายังว่าง</li>
         } else {
             return orders.map(order => {
                 return (
@@ -27,8 +27,8 @@ class Calculator extends Component {
                     {this.showOrders(orders)}
                 </ul>
                 <hr />
-                <button className="btn btn-block btn-danger title" >ยืนยัน</button>
-                <button className="btn btn-block btn-secondary title" >ยกเลิก</button>
+                <button className="btn btn-success" >ยืนยัน</button>
+                <button className="btn btn-danger" >ยกเลิก</button>
             </div>
         );
     }
