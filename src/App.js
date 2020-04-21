@@ -4,7 +4,9 @@ import Header from "./Component/Header";
 import NavBar from "./Component/Navbar"
 import Login from "./Component/Login";
 import Show from './Component/Show';
-
+import Home from './Component/Home';
+import fire from './Component/Firebase/Config'
+import { BrowserRouter, Route, Link, Router, Redirect } from 'react-router-dom';
 class App extends Component {
 
   constructor(props) {
@@ -27,8 +29,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <Login />
+        {/* <NavBar />
+        <Login /> */}
+         <Route exact path="/" component={Home} />
+        {/* <Route path="/login" component={Login} /> */}
         {/* <Header /> */}
         {/* <Show products={this.state.products} /> */}
         {/* <Monitor products={this.state.products} />
