@@ -4,7 +4,7 @@ class Calculator extends Component {
 
     showOrders (orders) {
         if(!orders || orders.length == 0) {
-            return <li className="text-right text-muted title">หยิบใส่ตระกร้า</li>
+            return <li className="text-right text-muted title">ยังไม่มีรายการสินค้า</li>
         } else {
             return orders.map(order => {
                 return (
@@ -21,14 +21,16 @@ class Calculator extends Component {
         const { totalPrice, orders } = this.props;
         return (
             <div>
-                <h1 className="text-right"> {totalPrice} THB</h1>
-                <hr />
+                
+                
                 <ul className="list-unstyled ">
                     {this.showOrders(orders)}
                 </ul>
+                <hr/>
+                <h1 className="text-right"> {totalPrice} THB</h1>
                 <hr />
                 <button className="btn btn-success" >ยืนยัน</button>
-                 
+                <nbsp>  </nbsp>
                 <button className="btn btn-danger" >ยกเลิก</button>
             </div>
         );

@@ -2,7 +2,7 @@ import './App.css'
 import React, { Component } from 'react';
 import Header from "./Component/Header";
 import NavBar from "./Component/Navbar"
-
+import Login from "./Component/Login";
 import Show from './Component/Show';
 
 class App extends Component {
@@ -28,8 +28,9 @@ class App extends Component {
     return (
       <div>
         <NavBar />
+        <Login />
         {/* <Header /> */}
-        <Show products={this.state.products} />
+        {/* <Show products={this.state.products} /> */}
         {/* <Monitor products={this.state.products} />
         <Footer company="Olanlab" email="olan@olanlab.com" /> */}
       </div>
