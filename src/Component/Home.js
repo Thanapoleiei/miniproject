@@ -14,6 +14,7 @@ const Home = () => {
       e.preventDefault();
       fire.auth().signInWithEmailAndPassword(email, password).then((u) => {
           console.log(u)
+          
       }).catch((err) => {
           console.log(err)
       })

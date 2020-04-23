@@ -34,6 +34,7 @@ class Home1 extends Component{
         e.preventDefault()
         fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
             console.log(u)
+            props.history.push('/Login')
         }).catch((err) => {
             console.log(err)
         })

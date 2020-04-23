@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { withAlert } from 'react-alert'
 class Calculator extends Component {
 
     showOrders (orders) {
@@ -32,6 +32,7 @@ class Calculator extends Component {
                 <button className="btn btn-success" >ยืนยัน</button>
                 <nbsp>  </nbsp>
                 <button className="btn btn-danger" >ยกเลิก</button>
+                
             </div>
         );
     }

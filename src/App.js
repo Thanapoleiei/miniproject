@@ -58,14 +58,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <NavBar />
-        <Login /> */}
-         <Route exact path="/" component={Home1} />
+        <NavBar />
+        {/* <Login /> */}
+         {/* <Route exact path="/" component={Home} /> */}
         <Route path="/login" component={Login} />
         {/* <Header /> */}
-        {/* <Show products={this.state.products} /> */}
-        {/* <Monitor products={this.state.products} />
-        <Footer company="Olanlab" email="olan@olanlab.com" /> */}
+        <Show products={this.state.products} />
+         {/* <Monitor products={this.state.products} /> */}
+        {/* <Footer company="Olanlab" email="olan@olanlab.com" />  */}
       </div>
     );
   }
