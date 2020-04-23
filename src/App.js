@@ -7,6 +7,7 @@ import Show from './Component/Show';
 import Home from './Component/Home';
 import fire from './Firebase/Config'
 import { BrowserRouter, Route, Link, Router, Redirect } from 'react-router-dom';
+import Home1 from './Component/Home1';
 class App extends Component {
   constructor(props) {
     super(props)
@@ -46,7 +47,7 @@ class App extends Component {
   if (this.state.user == null) {
     return (
       <div>
-        <Login />
+        <Login/>
       </div>
 
     );
@@ -59,7 +60,7 @@ class App extends Component {
       <div>
         {/* <NavBar />
         <Login /> */}
-         <Route exact path="/" component={Home} />
+         <Route exact path="/" component={Home1} />
         <Route path="/login" component={Login} />
         {/* <Header /> */}
         {/* <Show products={this.state.products} /> */}
