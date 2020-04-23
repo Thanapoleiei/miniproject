@@ -1,7 +1,7 @@
 import './App.css'
 import React, { Component } from 'react';
 import Header from "./Component/Header";
-import NavBar from "./Component/Navbar"
+import Nav from "./Component/Nav"
 import Login from "./Component/Login";
 import Show from './Component/Show';
 import Home from './Component/Home';
@@ -58,12 +58,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+       
         {/* <Login /> */}
-         {/* <Route exact path="/" component={Home} /> */}
-        <Route path="/login" component={Login} />
+         <Route exact path="/" component={Home} />
+        <Route path="/Home" component={Home1} />
         {/* <Header /> */}
-        <Show products={this.state.products} />
+        {/* <Show products={this.state.products} /> */}
          {/* <Monitor products={this.state.products} /> */}
         {/* <Footer company="Olanlab" email="olan@olanlab.com" />  */}
       </div>

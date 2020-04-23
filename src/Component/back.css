@@ -1,0 +1,10 @@
+body, html {
+  height: 100%;
+  }
+  .bg {
+  background-image: url("https://image.freepik.com/foto-gratis/fondo-realista-coronavirus_167960-23.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }

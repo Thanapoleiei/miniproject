@@ -4,7 +4,9 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import fire from '../Firebase/Config'
 import 'firebase/auth'
-
+import Login from "./Login";
+import Show from './Show';
+import Nav from './Nav'
 import {
   MDBContainer,
   MDBRow,
@@ -16,111 +18,61 @@ import {
   MDBCardHeader,
   MDBBtn
 } from "mdbreact";
+import { render } from "@testing-library/react";
 
-class Home1 extends Component{
-    constructor(props){
-
-        super(props)
-        this.login = this.login.bind(this)
-        this.handleChange = this.handleChange.bind(this)
-        this.signup = this.signup.bind(this)
-        this.state = {
-            email: "",
-            password: ""
-        }
+class Home1 extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      user: {},
+      products : ""
     }
+  }
 
-    login(e) {
-        e.preventDefault()
-        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
-            console.log(u)
-            props.history.push('/Login')
-        }).catch((err) => {
-            console.log(err)
-        })
-    }
+  componentDidMount() {
+    this.authListener()
+  }
 
-    handleChange(e){
-        this.setState({
-            [e.target.name] : e.target.value
-        })
-    }
 
-    signup(e){
-        e.preventDefault()
-        fire .auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-            console.log(u)
-        }).catch((err)=>{
-            console.log(err)
-        })
-    }
+  authListener() {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user })
+      }
+      else {
+        this.setState({ user: null })
+      }
+    })
+  }
+ 
+  componentDidMount() {
+    this.setState({products : [
+      { productId: 1, productName: "หน้ากากอนามัยลายดอก No.01", unitPrice: "49", thumbnail: "/image/No.01.jpg" },
+      { productId: 2, productName: "หน้ากากอนามัยลายดอก No.02", unitPrice: "49", thumbnail: "/image/No.02.jpg" },
+      { productId: 3, productName: "หน้ากากอนามัยลายดอก No.03", unitPrice: "49", thumbnail: "/image/No.03.jpg" },
+      { productId: 4, productName: "หน้ากากอนามัยลายดอก No.04", unitPrice: "49", thumbnail: "/image/No.04.jpg" },
+      { productId: 5, productName: "หน้ากากอนามัยลายดอก No.05", unitPrice: "49", thumbnail: "/image/No.05.jpg" },
+      { productId: 6, productName: "หน้ากากอนามัยลายดอก No.06", unitPrice: "49", thumbnail: "/image/No.06.jpg" },
+      { productId: 5, productName: "หน้ากากอนามัยลายดอก No.07", unitPrice: "49", thumbnail: "/image/No.07.jpg" },
+      { productId: 5, productName: "หน้ากากอนามัยลายดอก No.08", unitPrice: "49", thumbnail: "/image/No.08.jpg" },
+  ]})
+  if (this.state.user == null) {
+    return (
+      <div>
+        <Login/>
+      </div>
 
-    render(){
-  return (
-    <MDBContainer>
-      <MDBRow>
-        <MDBCol md="6">
-          <MDBCard>
-            <MDBCardBody>
-              <MDBCardHeader className="form-header warm-flame-gradient rounded">
-                <h3 className="my-3">
-                  <MDBIcon icon="lock" /> Login:
-                </h3>
-              </MDBCardHeader>
-              <label
-                htmlFor="defaultFormEmailEx"
-                className="grey-text font-weight-light"
-              >
-                Your email
-              </label>
-              <input
-                type="email"
-                id="defaultFormEmailEx"
-                className="form-control"
-                name="email"
-                value={this.state.email}
-                onChange={this.handleChange}
-                
-              />
-
-              <label
-                htmlFor="defaultFormPasswordEx"
-                className="grey-text font-weight-light"
-              >
-                Your password
-              </label>
-              <input
-                type="password"
-                id="defaultFormPasswordEx"
-                className="form-control"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleChange}
-                
-              />
-
-              <div className="text-center mt-4">
-                <MDBBtn color="deep-orange" onClick ={this.login} className="mb-3" type="submit">
-                  Login
-                </MDBBtn>
-                <MDBBtn color="deep-orange" onClick ={this.signup} className="mb-3" type="submit">
-                  Register
-                </MDBBtn>
-              </div>
-
-              <MDBModalFooter>
-                <div className="font-weight-light">
-                  <p>Not a member? Sign Up</p>
-                  <p>Forgot Password?</p>
-                </div>
-              </MDBModalFooter>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
-  );
-};
+    );
+  }
+  }
+  render() {
+    return (
+        <div>
+          <Nav />
+          <Show products={this.state.products} />
+        </div>
+    );
+  }
 }
 
-export default Home1;
+  export default Home1;
