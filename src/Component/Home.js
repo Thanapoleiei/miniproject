@@ -40,7 +40,7 @@ const Home = (props) => {
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#"><img style={{ height: 70, width: 60 }} src="/image/medical-mask.png" alt="" />
-                {"   "}Ock Ock </a>
+                {"   "}Mask Mask </a>
             </li>
 
           </ul>
