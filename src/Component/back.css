@@ -2,9 +2,22 @@ body, html {
   height: 100%;
   }
   .bg {
-  background-image: url("https://image.freepik.com/foto-gratis/fondo-realista-coronavirus_167960-23.jpg");
+  background-image: url("https://1.bp.blogspot.com/-_f3qnxjDwrA/XqMWV1FoKRI/AAAAAAAAACc/-ZTs7Jy_ycYGVDxjTAqsVsRhJ-sDqPGYwCLcBGAsYHQ/s320");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+   /* background: url(https://image.freepik.com/foto-gratis/fondo-realista-coronavirus_167960-23.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  }
+  .bgh{
+
+     background: url(https://1.bp.blogspot.com/-5ld2rAm0IIM/XqMZAfIt5mI/AAAAAAAAACs/5J8N5YCz7wkS0C7QIfdqdaltsjJ6aBGYACEwYBhgL/s320) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   }

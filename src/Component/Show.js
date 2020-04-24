@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Calculator from "./Calculator";
 import List from "./List";
-
+import "./back.css";
 class Show extends Component {
 
     constructor(props) {
@@ -31,6 +31,7 @@ class Show extends Component {
 
     render() {
         return (
+            <div class='bgh'>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-9 ">
@@ -42,6 +43,7 @@ class Show extends Component {
                     </div>
                   
                 </div>
+            </div>
             </div>
         )
     }

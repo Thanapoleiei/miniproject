@@ -1,13 +1,23 @@
 import React, { Component } from "react";
 import { withAlert } from 'react-alert'
+import { useAlert } from "react-alert";
 class Calculator extends Component {
-
+    shoot() {
+    
+    
+        alert("ยืนยันการสั่งซื้อเรียบร้อยแล้ว")
+           
+       
+        
+      }
     showOrders (orders) {
         if(!orders || orders.length == 0) {
-            return(
-            <div><br></br><li className="text-right text-muted title">ยังไม่มีรายการสินค้า</li></div>
-            
+            return( <div><br></br>
+                <li className="text-right text-muted">ยังไม่มีรายการสินค้า</li></div>
             )
+
+            
+            
         } else {
             return orders.map(order => {
                 return (
@@ -19,9 +29,11 @@ class Calculator extends Component {
             })
         }
     }
+   
 
     render() {
         const { totalPrice, orders } = this.props;
+        
         return (
             <div>
                 
@@ -32,9 +44,9 @@ class Calculator extends Component {
                 <hr/>
                 <h1 className="text-right"> {totalPrice} THB</h1>
                 <hr />
-                <button className="btn btn-success" >ยืนยัน</button>
+                <button className="btn btn-success" onClick={this.shoot}>ยืนยัน</button>
                 <nbsp>  </nbsp>
-        <button className="btn btn-danger" >{}ยกเลิก</button>
+                
                 
             </div>
         );
