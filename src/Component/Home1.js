@@ -29,6 +29,13 @@ class Home1 extends Component {
     }
   }
 
+  
+  logout = () => {
+
+    fire.auth().signOut();
+
+   
+  }
   componentDidMount() {
     this.authListener()
   }

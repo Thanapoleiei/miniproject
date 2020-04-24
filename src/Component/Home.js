@@ -16,7 +16,7 @@ const Home = (props) => {
       e.preventDefault();
       fire.auth().signInWithEmailAndPassword(email, password).then((u) => {
           console.log(u)
-          props.history.push('/Show')
+          props.history.push('/Home')
       }).catch((err) => {
           console.log(err)
       })
