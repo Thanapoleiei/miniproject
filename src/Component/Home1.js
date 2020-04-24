@@ -4,21 +4,11 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import fire from '../Firebase/Config'
 import 'firebase/auth'
-import Login from "./Login";
+
 import Show from './Show';
 import Nav from './Nav'
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBModalFooter,
-  MDBIcon,
-  MDBCardHeader,
-  MDBBtn
-} from "mdbreact";
-import { render } from "@testing-library/react";
+
+
 
 class Home1 extends Component {
   constructor(props) {
@@ -66,7 +56,7 @@ class Home1 extends Component {
   if (this.state.user == null) {
     return (
       <div>
-        <Login/>
+        <Home1/>
       </div>
 
     );

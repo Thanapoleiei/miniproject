@@ -4,7 +4,10 @@ class Calculator extends Component {
 
     showOrders (orders) {
         if(!orders || orders.length == 0) {
-            return <li className="text-right text-muted title">ยังไม่มีรายการสินค้า</li>
+            return(
+            <div><br></br><li className="text-right text-muted title">ยังไม่มีรายการสินค้า</li></div>
+            
+            )
         } else {
             return orders.map(order => {
                 return (
@@ -31,7 +34,7 @@ class Calculator extends Component {
                 <hr />
                 <button className="btn btn-success" >ยืนยัน</button>
                 <nbsp>  </nbsp>
-                <button className="btn btn-danger" >ยกเลิก</button>
+        <button className="btn btn-danger" >{}ยกเลิก</button>
                 
             </div>
         );
