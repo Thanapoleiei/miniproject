@@ -7,8 +7,8 @@ export default function Nav() {
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/Home"><img style={{ height: 70, width: 60 }} src="/image/virus.png" alt="" />
-                            {"   "}Ock Ock </a>
+                        <a class="nav-link" href="/Home"><img style={{ height: 80, width: 60 }} src="/image/medical-mask.png" alt="" />
+                            {"    "}  Mask Mask </a>
                     </li>
                 </ul>
             </div>

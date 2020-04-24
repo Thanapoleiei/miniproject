@@ -39,7 +39,7 @@ const Home = (props) => {
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"><img style={{ height: 70, width: 60 }} src="/image/virus.png" alt="" />
+              <a class="nav-link" href="#"><img style={{ height: 70, width: 60 }} src="/image/medical-mask.png" alt="" />
                 {"   "}Ock Ock </a>
             </li>
 
