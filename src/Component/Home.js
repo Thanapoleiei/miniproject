@@ -26,7 +26,7 @@ const Home = (props) => {
     e.preventDefault()
     fire.auth().createUserWithEmailAndPassword(email, password).then((u) => {
       console.log(u)
-      alert('REGISTER SUCCESS')
+      alert('REGISTER SUCCESS YOU CAN LOG IN')
     }).catch((err) => {
       console.log(err)
     })
