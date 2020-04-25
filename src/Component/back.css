@@ -2,11 +2,13 @@ body, html {
   height: 100%;
   }
   .bg {
-  background-image: url("https://1.bp.blogspot.com/-_f3qnxjDwrA/XqMWV1FoKRI/AAAAAAAAACc/-ZTs7Jy_ycYGVDxjTAqsVsRhJ-sDqPGYwCLcBGAsYHQ/s320");
+  background-image: url("https://1.bp.blogspot.com/-i9XuxoA1EyU/XqRGc6ejKbI/AAAAAAAAAC4/YBpfn5_hZSQ_yUooIDB5PQNQ0Xzrun0hACLcBGAsYHQ/s320");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
+    filter: alpha(opacity=70)
    /* background: url(https://image.freepik.com/foto-gratis/fondo-realista-coronavirus_167960-23.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -15,9 +17,10 @@ body, html {
   }
   .bgh{
 
-     background: url(https://1.bp.blogspot.com/-5ld2rAm0IIM/XqMZAfIt5mI/AAAAAAAAACs/5J8N5YCz7wkS0C7QIfdqdaltsjJ6aBGYACEwYBhgL/s320) no-repeat center center fixed; 
+     background: url(https://1.bp.blogspot.com/-9S718NdO_24/XqRGdMXB_1I/AAAAAAAAAC8/bWZawzvmpuYb070ER52XZKEQNuYdxGJXwCLcBGAsYHQ/s320) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
   }

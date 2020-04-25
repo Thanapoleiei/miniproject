@@ -5,13 +5,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from 'react-router-dom'
-import { positions, Provider } from "react-alert";
-import AlertTemplate from "react-alert-template-basic";
+
+
 import  {render} from 'react-dom';
-const options = {
-  timeout: 5000,
-  position: positions.BOTTOM_CENTER
-};
+
 
 
 render(

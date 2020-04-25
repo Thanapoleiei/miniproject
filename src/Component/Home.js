@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import fire from '../Firebase/Config'
 import "./back.css";
 
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardHeader } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardHeader,MDBMask,MDBView } from 'mdbreact';
 const Home = (props) => {
 
   const [email, setEmail] = useState('')
@@ -39,7 +39,7 @@ const Home = (props) => {
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"><img style={{ height: 70, width: 60 }} src="/image/medical-mask.png" alt="" />
+              <a class="nav-link" href="/"><img style={{ height: 70, width: 60 }} src="/image/medical-mask.png" alt="" />
                 {"   "}Mask Mask </a>
             </li>
 
@@ -47,28 +47,24 @@ const Home = (props) => {
         </div>
 
       </nav>
-      <div>
-        <div class="bg" >
-
-
-
-
-          <MDBContainer>
-            <MDBRow md="10">
-
-              <MDBCol md="12">
+      
                 <MDBCard>
+                <MDBView src="http://1.bp.blogspot.com/--whU-255l8s/XqRSD5xcP3I/AAAAAAAAADo/81fInD2HoBAnnbd5xEr3bV5bllgu5OSmQCLcBGAsYHQ/s320">
+            <MDBMask className="flex-center flex-column text-white text-center">
+              
+              
+          
                   <MDBCardBody>
-                    <MDBCardHeader className="md-card-header-text">
-                      <h3 className="col-8">
+                    <MDBCardHeader color="black" className="md-card-header-text">
+                      <h3 className="col-12">
                         SIGN UP
                 </h3>
                     </MDBCardHeader>
 
 
-                    <div className="grey-text">
+                    <div className="white-text">
                       <br></br>
-                               E-MAIL
+                             <h5 >  E-MAIL</h5>
                                 <input
 
                         type="email"
@@ -79,7 +75,7 @@ const Home = (props) => {
 
                       />
                       <br></br>
-              PASSWORD
+            <h5>  PASSWORD</h5>
                                 <input
                         type="password"
                         id="defaultFormPasswordEx"
@@ -91,19 +87,20 @@ const Home = (props) => {
                       />
                     </div>
                     <div className="text-center">
-                      <button type="button" class="btn btn-outline-success waves-effect" onClick={login}><i class="fas fa-magic mr-1"></i>LOG IN</button>
-                      <button type="button" class="btn btn-outline-success waves-effect" onClick={signup}><i class="fas fa-magic mr-1"></i>REGISTER</button>
+                      <br></br>
+                      <button type="button" class="btn btn-outline-danger " onClick={login}><i class="fas fa-magic mr-1"></i>LOG IN</button>
+                      <button type="button" class="btn btn-outline-danger" onClick={signup}><i class="fas fa-magic mr-1"></i>REGISTER</button>
 
                     </div>
                   </MDBCardBody>
+                  </MDBMask>
+          </MDBView>
                 </MDBCard>
-              </MDBCol>
-            </MDBRow>
-          </MDBContainer>
+          
 
         </div>
-      </div>
-    </div>
+      
+    
 
 
 
