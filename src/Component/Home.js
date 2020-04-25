@@ -3,8 +3,7 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import fire from '../Firebase/Config'
 import "./back.css";
-
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardHeader,MDBMask,MDBView } from 'mdbreact';
+import { MDBCard, MDBCardBody, MDBCardHeader, MDBMask, MDBView } from 'mdbreact';
 const Home = (props) => {
 
   const [email, setEmail] = useState('')
@@ -42,67 +41,56 @@ const Home = (props) => {
               <a class="nav-link" href="/"><img style={{ height: 70, width: 60 }} src="/image/medical-mask.png" alt="" />
                 {"   "}Mask Mask </a>
             </li>
-
           </ul>
         </div>
-
       </nav>
-      
-                <MDBCard>
-                <MDBView src="http://1.bp.blogspot.com/--whU-255l8s/XqRSD5xcP3I/AAAAAAAAADo/81fInD2HoBAnnbd5xEr3bV5bllgu5OSmQCLcBGAsYHQ/s320">
-            <MDBMask className="flex-center flex-column text-white text-center">
-              
-              
-          
-                  <MDBCardBody>
-                    <MDBCardHeader color="black" className="md-card-header-text">
-                      <h3 className="col-12">
-                        SIGN UP
+
+      <MDBCard>
+        <MDBView src="http://1.bp.blogspot.com/--whU-255l8s/XqRSD5xcP3I/AAAAAAAAADo/81fInD2HoBAnnbd5xEr3bV5bllgu5OSmQCLcBGAsYHQ/s320">
+          <MDBMask className="flex-center flex-column text-white text-center">
+            <MDBCardBody>
+              <MDBCardHeader color="black" className="md-card-header-text">
+                <h3 className="col-12">
+                  SIGN UP
                 </h3>
-                    </MDBCardHeader>
+              </MDBCardHeader>
+               <div className="white-text">
+                <br></br>
+                <h5 >  E-MAIL</h5>
+                <input
+
+                  type="email"
+                  id="defaultFormEmailEx"
+                  className="form-control"
+                  name="email"
+                  onChange={(e) => setEmail(e.target.value)}
+
+                />
+                <br></br>
+                <h5>  PASSWORD</h5>
+                <input
+                  type="password"
+                  id="defaultFormPasswordEx"
+                  className="form-control"
+                  name="password"
+                  validate onChange={(e) => setPassword(e.target.value)}
 
 
-                    <div className="white-text">
-                      <br></br>
-                             <h5 >  E-MAIL</h5>
-                                <input
+                />
+              </div>
+              <div className="text-center">
+                <br></br>
+                <button type="button" class="btn btn-outline-danger " onClick={login}><i class="fas fa-magic mr-1"></i>LOG IN</button>
+                <button type="button" class="btn btn-outline-danger" onClick={signup}><i class="fas fa-magic mr-1"></i>REGISTER</button>
 
-                        type="email"
-                        id="defaultFormEmailEx"
-                        className="form-control"
-                        name="email"
-                        onChange={(e) => setEmail(e.target.value)}
-
-                      />
-                      <br></br>
-            <h5>  PASSWORD</h5>
-                                <input
-                        type="password"
-                        id="defaultFormPasswordEx"
-                        className="form-control"
-                        name="password"
-                        validate onChange={(e) => setPassword(e.target.value)}
+              </div>
+            </MDBCardBody>
+          </MDBMask>
+        </MDBView>
+      </MDBCard>
 
 
-                      />
-                    </div>
-                    <div className="text-center">
-                      <br></br>
-                      <button type="button" class="btn btn-outline-danger " onClick={login}><i class="fas fa-magic mr-1"></i>LOG IN</button>
-                      <button type="button" class="btn btn-outline-danger" onClick={signup}><i class="fas fa-magic mr-1"></i>REGISTER</button>
-
-                    </div>
-                  </MDBCardBody>
-                  </MDBMask>
-          </MDBView>
-                </MDBCard>
-          
-
-        </div>
-      
-    
-
-
+    </div>
 
   )
 }
