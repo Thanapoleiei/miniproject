@@ -27,6 +27,7 @@ const Home = (props) => {
     fire.auth().createUserWithEmailAndPassword(email, password).then((u) => {
       console.log(u)
       alert('REGISTER SUCCESS YOU CAN LOG IN')
+      props.history.push('/Home')
     }).catch((err) => {
       console.log(err)
     })
