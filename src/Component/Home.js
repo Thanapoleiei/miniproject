@@ -10,7 +10,6 @@ const Home = (props) => {
   const [password, setPassword] = useState('')
 
   const login = e => {
-
     e.preventDefault();
     fire.auth().signInWithEmailAndPassword(email, password).then((u) => {
       console.log(u)
@@ -20,10 +19,7 @@ const Home = (props) => {
       alert('Incorrect username or password')
     })
   }
-
-
   const signup = e => {
-
     e.preventDefault()
     fire.auth().createUserWithEmailAndPassword(email, password).then((u) => {
       console.log(u)

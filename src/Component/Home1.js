@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-import fire from '../Firebase/Config'
 import 'firebase/auth'
 import Show from './Show';
 import Nav from './Nav'
@@ -12,33 +11,10 @@ class Home1 extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: {},
       products: ""
     }
   }
 
-
-  logout = () => {
-
-    fire.auth().signOut();
-
-
-  }
-  componentDidMount() {
-    this.authListener()
-  }
-
-
-  authListener() {
-    fire.auth().onAuthStateChanged((user) => {
-      if (user) {
-        this.setState({ user })
-      }
-      else {
-        this.setState({ user: null })
-      }
-    })
-  }
 
   componentDidMount() {
     this.setState({
