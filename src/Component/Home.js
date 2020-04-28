@@ -17,6 +17,7 @@ const Home = (props) => {
       props.history.push('/Home')
     }).catch((err) => {
       console.log(err)
+      alert('Incorrect username or password')
     })
   }
 
